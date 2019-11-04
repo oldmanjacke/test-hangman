@@ -11,7 +11,7 @@ namespace test_hangman
         {
             Random random = new Random((int)DateTime.Now.Ticks);
 
-            string[] wordBank = { "Blue", "Black", "Yellow", "Orange", "Green", "Purple" ,"Rainbow" };
+            string[] wordBank = { "Blue", "Black", "Yellow", "Orange", "Green", "Purple", "Rainbow" };
 
             string wordToGuess = wordBank[random.Next(0, wordBank.Length)];
             string wordToGuessUppercase = wordToGuess.ToUpper();
