@@ -23,7 +23,7 @@ namespace test_hangman
             List<char> correctGuesses = new List<char>();
             List<char> incorrectGuesses = new List<char>();
 
-            int lives = 5;
+            int lives = 10;
             bool won = false;
             int lettersRevealed = 0;
 
