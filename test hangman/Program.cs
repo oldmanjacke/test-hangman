@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace test_hangman
@@ -11,7 +10,7 @@ namespace test_hangman
         {
             Random random = new Random((int)DateTime.Now.Ticks);
 
-            string[] wordBank = { "Blue", "Black", "Yellow", "Orange", "Green", "Purple", "Rainbow" };
+            string[] wordBank = { "Blue", "Black", "Yellow", "Orange", "Green", "Purple", "Rainbow", "grey", "pink", "red" };
 
             string wordToGuess = wordBank[random.Next(0, wordBank.Length)];
             string wordToGuessUppercase = wordToGuess.ToUpper();
