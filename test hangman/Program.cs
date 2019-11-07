@@ -15,17 +15,17 @@ namespace test_hangman
             string wordToGuess = wordBank[random.Next(0, wordBank.Length)];
             string wordToGuessUppercase = wordToGuess.ToUpper();
 
-            StringBuilder displayToPlayer = new StringBuilder(wordToGuess.Length); //måste fixa så man kan se sina ord man har gissat
+            StringBuilder displayToPlayer = new StringBuilder(wordToGuess.Length); //måste fixa så man kan se sina ord man har gissat. frågan är vad i koden
             for (int i = 0; i < wordToGuess.Length; i++)
                 displayToPlayer.Append('_');
 
             List<char> correctGuesses = new List<char>();
             List<char> incorrectGuesses = new List<char>();
-
+            //måste fixa så man kan gissa hela ord, och kanse så det inte tar upp mer än en liv, frågan är var i kode
             int lives = 10;
             bool won = false;
             int lettersRevealed = 0;
-
+            // displaya liv mängd. fixa då så visa fel orden.
             string input;
             char guess;
 
