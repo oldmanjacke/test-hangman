@@ -10,12 +10,12 @@ namespace test_hangman
         {
             Random random = new Random((int)DateTime.Now.Ticks);
 
-            string[] wordBank = { "Blue", "Black", "Yellow", "Orange", "Green", "Purple", "Rainbow", "grey", "pink", "red" };
+            string[] wordBank = { "Blue", "Black", "Yellow", "Orange", "Green", "Purple", "Rainbow", "Grey", "Pink", "Red", "White" };
 
             string wordToGuess = wordBank[random.Next(0, wordBank.Length)];
             string wordToGuessUppercase = wordToGuess.ToUpper();
 
-            StringBuilder displayToPlayer = new StringBuilder(wordToGuess.Length);
+            StringBuilder displayToPlayer = new StringBuilder(wordToGuess.Length); //måste fixa så man kan se sina ord man har gissat
             for (int i = 0; i < wordToGuess.Length; i++)
                 displayToPlayer.Append('_');
 
