@@ -23,7 +23,7 @@ namespace test_hangman
             List<char> incorrectGuesses = new List<char>();
             //måste fixa så man kan gissa hela ord, och kanse så det inte tar upp mer än en liv, frågan är var i kode
             int lives = 10;
-            Console.WriteLine(" guess left: " + lives + "\n");
+            Console.WriteLine(" your max guess: " + lives + "\n");
             bool won = false;
             int lettersRevealed = 0;
             // displaya liv mängd. fixa då så visa fel orden.
