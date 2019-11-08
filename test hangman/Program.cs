@@ -23,6 +23,7 @@ namespace test_hangman
             List<char> incorrectGuesses = new List<char>();
             //måste fixa så man kan gissa hela ord, och kanse så det inte tar upp mer än en liv, frågan är var i kode
             int lives = 10;
+            Console.WriteLine(" guess left: " + lives + "\n");
             bool won = false;
             int lettersRevealed = 0;
             // displaya liv mängd. fixa då så visa fel orden.
@@ -69,6 +70,7 @@ namespace test_hangman
 
                     Console.WriteLine("Nope, there's no '{0}' in it!", guess);
                     lives--;
+                    Console.WriteLine(" guess left: " + lives + "\n");
                 }
 
                 Console.WriteLine(displayToPlayer.ToString());
@@ -78,7 +80,7 @@ namespace test_hangman
                 Console.WriteLine("You won!");
             else
                 Console.WriteLine("You lost! It was '{0}'", wordToGuess);
-
+            
             Console.Write("Press ENTER to exit...");
             Console.ReadLine();
         }
