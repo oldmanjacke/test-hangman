@@ -29,8 +29,11 @@ namespace test_hangman
             int lettersRevealed = 0;
             // displaya liv mängd. fixa då så visa fel orden.
             string input;
+            string inputWord;
             char guess;
+            string guessWord2;
             var choose = Console.ReadLine();
+
             if (choose == "1")
             {
                 while (!won && lives > 0)
@@ -87,16 +90,31 @@ namespace test_hangman
                 Console.Write("Press ENTER to exit...");
                 Console.ReadLine();  // här under kommer för hela ordet gissning!
             }
+
             else if (choose == "2") 
             {
                 while (!won && lives > 0)
                 {
-                    Console.WriteLine("guess the word");
+                    guessWord2 = Console.ReadLine().ToUpper();
+                    Console.WriteLine(displayToPlayer +"\t" + "guess the word");
+                    input = Console.ReadLine().ToUpper();
+                    guessWord2 = input ;
 
                     input = Console.ReadLine().ToUpper();
-                    guess = input[0];
+                    guessWord2 = input;
 
-                    //if ()
+                    if (wordToGuess.Equals(guessWord2))
+                    {
+                        Console.WriteLine("You won! the word was:  {0}");
+                        break;
+                    }
+                    else
+                    {
+                        lives--;
+                        Console.WriteLine("\n" + "try again!");
+                        Console.WriteLine(" guess left: " + lives + "\n");
+                    }
+
                 }
             }
         }
