@@ -88,14 +88,14 @@ namespace test_hangman
                     Console.WriteLine("You lost! It was '{0}'", wordToGuess);
 
                 Console.Write("Press ENTER to exit...");
-                Console.ReadLine();  // här under kommer för hela ordet gissning!
+                Console.ReadLine();  // här under ska det komma för hela ordet gissning!
             }
 
-            else if (choose == "2") 
+            else if (choose == "2") // ska testa att bygga om koden under till att ta hela ord
             {
                 while (!won && lives > 0)
                 {
-                   // guessWord2 = Console.ReadLine().ToUpper();
+                   // guessWord2 = Console.ReadLine().ToUpper(); funkar inte med den
                     Console.WriteLine(displayToPlayer +"\t" + "guess the word");
                     input = Console.ReadLine().ToUpper();
                     wordToGuess = input;
@@ -106,7 +106,7 @@ namespace test_hangman
                     if (input.Contains(wordToGuess))
                     {
                         won = true;
-                        Console.WriteLine("You won! the word was:  {0}");
+                        Console.WriteLine("You won! the word was {0}", wordToGuess);
                         
                     }
                     else
@@ -114,6 +114,11 @@ namespace test_hangman
                         lives--;
                         Console.WriteLine("\n" + "try again!");
                         Console.WriteLine(" guess left: " + lives + "\n");
+
+                        if (lives == 0)
+                        {
+                       //     Console.WriteLine("Sorry" + )
+                        }
                     }
 
                 }
