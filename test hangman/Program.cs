@@ -19,7 +19,7 @@ namespace test_hangman
             for (int i = 0; i < wordToGuess.Length; i++)
                 displayToPlayer.Append('_');
 
-            List<char> correctGuesses = new List<char>();
+            List<char> correctGuesses = new List<char>();  // kanske göra en ny char lista och en annan char för val två?
             List<char> incorrectGuesses = new List<char>();
             //måste fixa så man kan gissa hela ord, och kanse så det inte tar upp mer än en liv, frågan är var i kode
             int lives = 10;
@@ -105,6 +105,7 @@ namespace test_hangman
 
                     if (input.Contains(wordToGuess))
                     {
+
                         won = true;
                         Console.WriteLine("You won! the word was {0}", wordToGuess);
                         
