@@ -92,7 +92,7 @@ namespace test_hangman
             }
 
             else if (choose == "2") // ska testa att bygga om koden under till att ta hela ord
-            {
+            { // min input gissning eller det man skriver in blir ingen värde eller den som ska kolla om man har gissat rätt på
                 while (!won && lives > 0)
                 {
                    // guessWord2 = Console.ReadLine().ToUpper(); funkar inte med den
