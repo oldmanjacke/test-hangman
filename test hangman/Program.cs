@@ -97,8 +97,7 @@ namespace test_hangman
                 {
                    // guessWord2 = Console.ReadLine().ToUpper(); funkar inte med den
                     Console.WriteLine(displayToPlayer +"\t" + "guess the word");
-                    input = Console.ReadLine().ToUpper();
-                    wordToGuess = input;
+    
 
                     input = Console.ReadLine().ToUpper();
                     wordToGuess = input;
