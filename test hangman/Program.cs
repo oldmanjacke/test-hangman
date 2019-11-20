@@ -31,7 +31,7 @@ namespace test_hangman
             string input;
            // string inputWord;
             char guess;
-           // string guessWord2;
+            string guessWord;
             var choose = Console.ReadLine();
 
             if (choose == "1")
@@ -100,13 +100,13 @@ namespace test_hangman
     
 
                     input = Console.ReadLine().ToUpper();
-                    wordToGuess = input;
+                    guessWord = input;
 
-                    if (input.Contains(wordToGuess))
+                    if (wordToGuess.ToUpper().Contains(guessWord))
                     {
 
                         won = true;
-                        Console.WriteLine("You won! the word was {0}", wordToGuess);
+                        Console.WriteLine("You won! " + wordToGuess + " the word was  ");
                         
                     }
                     else
@@ -117,7 +117,7 @@ namespace test_hangman
 
                         if (lives == 0)
                         {
-                       //     Console.WriteLine("Sorry" + )
+                            Console.WriteLine("Sorry the word is" + wordToGuess + "\n");
                         }
                     }
 
